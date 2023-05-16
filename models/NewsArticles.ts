@@ -6,6 +6,10 @@ export interface NewsArticle {
     urlToImage?: string,
     publishedAt: string,
     content: string,
+    source: {
+        id: string,
+        name: string, 
+        }
 }
 
 export interface NewsResponse {
