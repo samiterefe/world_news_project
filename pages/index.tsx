@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google'
 import { GetServerSideProps } from 'next'
 import Head from 'next/head'
 import { json } from 'stream/consumers'
+import NewsArticleEntry from '@/components/NewsArticleEntry'
+import NewsArticlesGrid from '@/components/ArticlesAlign'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -33,7 +35,8 @@ export default function BreakingNewsPage({ newsArticles }: BreakingNewsPageProps
          <h1> News Page </h1>
          <p>This page uses <strong>getServerSideProps</strong> to fetch data server-side on every request.
           This allows search engines to crawl the page content and <strong>improves SEO</strong>.</p>
-          { JSON.stringify(newsArticles)  }
+          
+          <NewsArticlesGrid  articles={newsArticles}/>
     </main>
     </>
   )

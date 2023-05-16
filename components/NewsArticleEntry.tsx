@@ -14,7 +14,7 @@ const NewsArticleEntry = ({ article: { title, description, url, urlToImage } }: 
 
     return (
         <a href={url}>
-            <Card className="h-100">
+            {/* <Card className="h-100">
                 <Image
                     src={validImageUrl || placeholderImage}
                     width={500}
@@ -26,35 +26,25 @@ const NewsArticleEntry = ({ article: { title, description, url, urlToImage } }: 
                     <Card.Title>{title}</Card.Title>
                     <Card.Text>{description}</Card.Text>
                 </Card.Body>
-            </Card>
+            </Card> */}
 
 
             <div className="max-w-sm rounded overflow-hidden shadow-lg">
             <div className="max-w-sm rounded overflow-hidden shadow-lg">
-  <Image  src="/img/card-top.jpg" alt="Sunset in the mountains" />
-  <div className="px-6 py-4">
-    <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
-    <p className="text-gray-700 text-base">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-    </p>
-  </div>
-  <div className="px-6 pt-4 pb-2">
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-  </div>
-</div> className="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains">
-            <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
-                <p className="text-gray-700 text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-                </p>
-            </div>
-            <div className="px-6 pt-4 pb-2">
-                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-            </div>
+                <Image  src={ placeholderImage || validImageUrl} width={500}
+        height={500} className="w-70 h-70"  alt="Sunset in the mountains" />
+                <div className="px-6 py-4">
+                    <div className="font-bold text-xl mb-2">{title}</div>
+                    <p className="text-gray-700 text-base">
+                    {description}
+                    </p>
+                </div>
+                <div className="px-6 pt-4 pb-2">
+                    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+                    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+                    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+                </div>
+             </div> 
             </div>
         </a>
     );
